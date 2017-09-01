@@ -1,0 +1,60 @@
+Loading data ...
+First 10 examples from the dataset: 
+ x = [2104 3], y = 399900 
+ x = [1600 3], y = 329900 
+ x = [2400 3], y = 369000 
+ x = [1416 2], y = 232000 
+ x = [3000 4], y = 539900 
+ x = [1985 4], y = 299900 
+ x = [1534 3], y = 314900 
+ x = [1427 3], y = 198999 
+ x = [1380 3], y = 212000 
+ x = [1494 3], y = 242500 
+Program paused. Press enter to continue.
+Normalizing Features ...
+Mean: [2000.681 3.170],
+ - Mean (SqFt): 2000.681,
+ - Mean (BedRoom): 3.170,
+Standard Deviation: [794.702 0.761],
+ - Standard Deviation (SqFt): 794.702,
+ - Standard Deviation (BedRoom): 0.761,
+First 10 examples from the NORMALIZED dataset: 
+ans =
+
+   0.130010  -0.223675
+  -0.504190  -0.223675
+   0.502476  -0.223675
+  -0.735723  -1.537767
+   1.257476   1.090417
+  -0.019732   1.090417
+  -0.587240  -0.223675
+  -0.721881  -0.223675
+  -0.781023  -0.223675
+  -0.637573  -0.223675
+
+Running gradient descent ...
+Theta computed from gradient descent: 
+ 334302.063993 
+ 100087.116006 
+ 3673.548451 
+
+Theta computed from gradient descent for different values of alpha: 
+alpha1 = 0.300000, alphaa2 = 0.100000, alpha3 = 0.030000 
+theta1 = 340412.659574, theta2 = 110631.050279, theta3 = -6649.474271 
+theta1 = 340412.659574, theta2 = 110631.050044, theta3 = -6649.474036 
+theta1 = 340412.628330, theta2 = 110573.592291, theta3 = -6592.016285 
+=============
+==> Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
+ $165489064.118993
+
+=============
+Program paused. Press enter to continue.
+Solving with normal equations...
+Theta computed from the normal equations: 
+ 89597.909543 
+ 139.210674 
+ -8738.019112 
+
+=============
+==> Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
+ $293081.464335

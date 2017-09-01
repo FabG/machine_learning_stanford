@@ -57,7 +57,12 @@ sigma = std(X);
 %  - feature 1: sizeHouse
 %  - feature 2: bedroomCount
 for i = 1:size(X,2)
-	X_norm(:,i) = ( X(:,i) - mu(i) ) / sigma(i);
+	mu(i) = mean(X(:,i));
+    X_norm(:,i) = X_norm(:,i) - mu(i);
+    sigma(i) = std(X_norm(:,i));
+    X_norm(:,i) = X_norm(:,i) / sigma(i);
+
+	%X_norm(:,i) = ( X(:,i) - mu(i) ) / sigma(i);
 end
 
 % ============================================================

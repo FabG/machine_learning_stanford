@@ -128,7 +128,7 @@ num_iters_v = [400, 400, 400, 400];
 [theta3, J3] = gradientDescentMulti(X, y, theta, alpha_v(3), num_iters_v(3));
 
 fprintf('Theta computed from gradient descent for different values of alpha: \n');
-fprintf('alpha1 = %f, alphaa2 = %f, alpha3 = %f \n',  alpha_v(1),  alpha_v(2),  alpha_v(3));
+fprintf('alpha1 = %f, alpha2 = %f, alpha3 = %f \n',  alpha_v(1),  alpha_v(2),  alpha_v(3));
 fprintf('theta1 = %f, theta2 = %f, theta3 = %f \n', theta1, theta2, theta3);
 
 figure;
