@@ -39,13 +39,14 @@ Theta computed from gradient descent:
  3673.548451 
 
 Theta computed from gradient descent for different values of alpha: 
-alpha1 = 0.300000, alphaa2 = 0.100000, alpha3 = 0.030000 
+alpha1 = 0.300000, alpha2 = 0.100000, alpha3 = 0.030000 
 theta1 = 340412.659574, theta2 = 110631.050279, theta3 = -6649.474271 
 theta1 = 340412.659574, theta2 = 110631.050044, theta3 = -6649.474036 
 theta1 = 340412.628330, theta2 = 110573.592291, theta3 = -6592.016285 
-=============
+Price to firecasat for: [2000.681 3.170],
+ - SqFt: -0.441  ==> Normalized:  - BedRoom: -0.224 ==> Normalized: =============
 ==> Predicted price of a 1650 sq-ft, 3 br house (using gradient descent):
- $165489064.118993
+ $289314.620338
 
 =============
 Program paused. Press enter to continue.
@@ -58,3 +59,5 @@ Theta computed from the normal equations:
 =============
 ==> Predicted price of a 1650 sq-ft, 3 br house (using normal equations):
  $293081.464335
+
+=============

@@ -144,7 +144,25 @@ ylabel('Cost J');
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = [1, 1650, 3] * theta;
+%price = [1, 1650, 3] * theta;	% wrong
+
+% Hint: At prediction, make sure you do the same feature normalization.
+size_house = 1650;
+br_house = 3;
+
+size_house_norm = (size_house-mu(1)) / sigma(1);
+br_house_norm = (br_house-mu(2)) / sigma(2);
+
+house_features = [1650, 3];
+house_features_norm = [1, size_house_norm, br_house_norm];
+
+% Print out some data points
+fprintf('Price to firecasat for: [%.3f %.3f],\n', mu);
+fprintf(' - SqFt: %.3f  ==> Normalized: %.3f,\n', size_house_norm);
+fprintf(' - BedRoom: %.3f ==> Normalized: %.3f,\n', br_house_norm);
+
+price = house_features_norm * theta;
+
 
 % ============================================================
 fprintf('=============\n');
