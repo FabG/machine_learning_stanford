@@ -26,14 +26,40 @@ sigma = zeros(1, size(X, 2));
 % Hint: You might find the 'mean' and 'std' functions useful.
 %       
 
+% Sample from matrix X = 
+%   2104      3
+%   1600      3
+%   2400      3
+%   1416      2
 
 
+%%%% mean of each feature %%%%
+mu = mean(X);
+
+% => mu = [ 1.0000   2000.6809      3.1702 ]
+%    => mean (sizeHouse)      = 2000 sq ft 
+%    => mean (bedroomCount)   = 3
 
 
+%%%% standard deviation of each feature %%%%
+% note: standard deviation measure how spread out the numbers are for each feature
+% a low value indictes that the data points tend to be close to the mean mu, also called expected value
+% it's the square root of the Variance where Variance is the average of the Squared differences from the mean
+sigma = std(X);
 
+% => sigma =[ 0.00000   794.70235     0.76098 ]
 
+%%%% normalization %%%%
+% normalize each feature value from training data set
+% normalized_value = (value - mean) / std
 
+% loop for each feature where
+%  - feature 1: sizeHouse
+%  - feature 2: bedroomCount
+for i = 1:size(X,2)
+	X_norm(:,i) = ( X(:,i) - mu(i) ) / sigma(i);
+end
 
 % ============================================================
 
-end
+

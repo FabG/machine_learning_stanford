@@ -51,8 +51,20 @@ fprintf('Normalizing Features ...\n');
 
 [X mu sigma] = featureNormalize(X);
 
+% Print out some data points
+fprintf('Mean: [%.3f %.3f],\n', mu);
+fprintf(' - Mean (SqFt): %.3f,\n', mu(1));
+fprintf(' - Mean (BedRoom): %.3f,\n', mu(2));
+fprintf('Standard Deviation: [%.3f %.3f],\n', sigma);
+fprintf(' - Standard Deviation (SqFt): %.3f,\n', sigma(1));
+fprintf(' - Standard Deviation (BedRoom): %.3f,\n', sigma(2));
+fprintf('First 10 examples from the NORMALIZED dataset: \n');
+X(1:10,:)
+
+
 % Add intercept term to X
 X = [ones(m, 1) X];
+
 
 
 %% ================ Part 2: Gradient Descent ================
@@ -100,20 +112,31 @@ fprintf('Theta computed from gradient descent: \n');
 fprintf(' %f \n', theta);
 fprintf('\n');
 
+% Debug stdout: 
+% Theta =
+%  334302.063993 
+% 100087.116006 
+% 3673.548451 
+
+
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
 % not need to be normalized.
-price = 0; % You should change this
-
+price = [1, 1650, 3] * theta;
 
 % ============================================================
-
-fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
-         '(using gradient descent):\n $%f\n'], price);
+fprintf('=============\n');
+fprintf(['==> Predicted price of a 1650 sq-ft, 3 br house ' ...
+         '(using gradient descent):\n $%2f\n\n'], price);
+fprintf('=============\n');
+% Debug stdout: 
+% price = $165489064.118993
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
+
+
 
 %% ================ Part 3: Normal Equations ================
 
@@ -146,14 +169,22 @@ fprintf('Theta computed from the normal equations: \n');
 fprintf(' %f \n', theta);
 fprintf('\n');
 
+% Debug stdout: 
+% Theta =
+% 334302.063993 
+% 100087.116006 
+% 3673.548451 
 
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
-price = 0; % You should change this
+price = [1, 1650, 3] * theta;
+
 
 
 % ============================================================
 
-fprintf(['Predicted price of a 1650 sq-ft, 3 br house ' ...
-         '(using normal equations):\n $%f\n'], price);
+fprintf('=============\n');
+fprintf(['==> Predicted price of a 1650 sq-ft, 3 br house ' ...
+         '(using normal equations):\n $%f\n\n'], price);
+fprintf('=============\n');
 
