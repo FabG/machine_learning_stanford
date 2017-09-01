@@ -119,6 +119,27 @@ fprintf('\n');
 % 3673.548451 
 
 
+% Try different values of alpha and iterations
+alpha_v = [0.3, 0.1, 0.03, 0.01];
+num_iters_v = [400, 400, 400, 400];
+
+[theta1, J1] = gradientDescentMulti(X, y, theta, alpha_v(1), num_iters_v(1));
+[theta2, J2] = gradientDescentMulti(X, y, theta, alpha_v(2), num_iters_v(2));
+[theta3, J3] = gradientDescentMulti(X, y, theta, alpha_v(3), num_iters_v(3));
+
+fprintf('Theta computed from gradient descent for different values of alpha: \n');
+fprintf('alpha1 = %f, alphaa2 = %f, alpha3 = %f \n',  alpha_v(1),  alpha_v(2),  alpha_v(3));
+fprintf('theta1 = %f, theta2 = %f, theta3 = %f \n', theta1, theta2, theta3);
+
+figure;
+plot(1:50, J1(1:50), 'b');
+hold on;
+plot(1:50, J2(1:50), 'r');
+plot(1:50, J3(1:50), 'k');
+xlabel('Number of iterations');
+ylabel('Cost J');
+
+
 % Estimate the price of a 1650 sq-ft, 3 br house
 % ====================== YOUR CODE HERE ======================
 % Recall that the first column of X is all-ones. Thus, it does
