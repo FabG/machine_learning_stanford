@@ -18,8 +18,19 @@ grad = zeros(size(theta));
 %               derivatives of the cost w.r.t. each parameter in theta
 
 
+% hypothesis
+h = sigmoid(X * theta);
 
+% Cost function
+% note that theta(1) should not be regularized
+% So we will apply below function to only theta[1], theta[2],...theta[n]
+theta_1n = theta(2:size(theta));
+theta_reg = [0;theta_1n];
 
+J = 1 / m * ( -y' * log(h) - ( 1 - y )' * log(1 - h) ) + lambda / (2 * m) * theta_reg'*theta_reg;
+
+% Gradient
+grad = 1 / m * X' * (h - y) + lambda / m * theta_reg ;
 
 
 % =============================================================

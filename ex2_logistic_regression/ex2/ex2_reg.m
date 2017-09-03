@@ -108,6 +108,11 @@ initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1 (you should vary this)
 lambda = 1;
+%lambda = 0.5;		%
+%lambda = 0;		% no regularization => overfit
+%lambda = 10;		% simpler decision boundary but starting to be underfit
+%lambda = 100;		% really underfit
+
 
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
