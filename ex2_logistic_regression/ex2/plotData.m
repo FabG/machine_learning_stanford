@@ -12,10 +12,23 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
+% format: plot (X, Y, PROPERTY, VALUE, ...)
+% Positive values should be black/cross:
+%    markerstyle: `+'  crosshair
+%    color:       `k'  blacK
+% Negative values should be yellow/circle:
+%    markerstyle: `o'  circle
+%    color:       ‘y’  yellow
 
+% First find Indices of Positive and Negative Examples
+pos = find(y == 1); 
+neg = find(y == 0);
 
+% Plot Postive Result:
+plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, 'MarkerSize', 5);
 
-
+% Plot Negative Result:
+plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', 'MarkerSize', 5);
 
 
 

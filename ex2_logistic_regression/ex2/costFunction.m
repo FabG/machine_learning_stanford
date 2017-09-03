@@ -21,11 +21,14 @@ grad = zeros(size(theta));
 %
 
 
+% hypothesis
+h = sigmoid(X * theta);
 
+% Cost
+J = 1 / m * ( -y' * log(h) - ( 1 - y )' * log(1 - h) );
 
-
-
-
+% Gradient
+grad = 1 / m * ((h - y)' * X)';
 
 % =============================================================
 

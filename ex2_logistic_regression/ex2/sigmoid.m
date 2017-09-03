@@ -9,10 +9,16 @@ g = zeros(size(z));
 % Instructions: Compute the sigmoid of each value of z (z can be a matrix,
 %               vector or scalar).
 
+% Because we can deal with matrices we will convert the below formula to work with vectors/matrics
+% For a matrix, your function should perform the sigmoid function on every element.
+% g = 1 / [1 + exp(-z)];
 
-
-
+g = 1 ./ (1 + e.^-z);
 
 % =============================================================
+
+% Debug plot
+% x = -10:0.1:10;
+% plot (x, sigmoid(x));
 
 end
