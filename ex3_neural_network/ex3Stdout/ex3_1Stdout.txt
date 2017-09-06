@@ -1,0 +1,32 @@
+Loading and Visualizing Data ...
+Program paused. Press enter to continue.
+
+Testing lrCostFunction() with regularization
+Cost: 2.534819
+Expected cost: 2.534819
+Gradients:
+ 0.146561 
+ -0.548558 
+ 0.724722 
+ 1.398003 
+Expected gradients:
+ 0.146561
+ -0.548558
+ 0.724722
+ 1.398003
+Program paused. Press enter to continue.
+
+Training One-vs-All Logistic Regression...
+Iteration    50 | Cost: 1.369977e-02
+Iteration    50 | Cost: 5.725245e-02
+Iteration    50 | Cost: 6.403974e-02
+Iteration    50 | Cost: 3.645229e-02
+Iteration    50 | Cost: 6.186175e-02
+Iteration    50 | Cost: 2.165557e-02
+Iteration    50 | Cost: 3.563556e-02
+Iteration    50 | Cost: 8.579648e-02
+Iteration    50 | Cost: 8.023665e-02
+Iteration    50 | Cost: 9.999744e-03
+Program paused. Press enter to continue.
+
+Training Set Accuracy: 94.980000
