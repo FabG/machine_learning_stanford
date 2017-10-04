@@ -11,3 +11,10 @@ Requirements:
  Octave download link: https://www.gnu.org/software/octave/
 
 
+Exercise 1: Linear Regression
+Exercise 2: Logistic Regression
+Exercise 3: Muli-class Classification and Neural Network
+Exercise 4: Neural Network
+Exercise 5: Regularized Linear Regression
+Exercise 6: Support Vector Machine
+Exercise 7: Unsupervised ML, K-means Clustering and PCA
